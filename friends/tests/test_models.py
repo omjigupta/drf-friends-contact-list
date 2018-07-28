@@ -15,6 +15,6 @@ class FriendTest(TestCase):
         friend_om = Friend.objects.get(name='Om Ji')
         friend_suvesh = Friend.objects.get(name='Suvesh')
         self.assertEqual(
-            friend_om.get_phone_number(), "Om Ji contact number is 9696114453.")
+            friend_om.get_phone_number(), "Om Ji contact number is 9696114453 .")
         self.assertEqual(
-            friend_suvesh.get_phone_number(), "Suvesh contact number is 8015097750.")
+            friend_suvesh.get_phone_number(), "Suvesh contact number is 8015097750 .")

@@ -26,3 +26,21 @@ def get_post_friends(request):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET', 'DELETE', 'PUT'])
+def get_delete_update_friend(request, pk):
+    try:
+        friend = Friend.objects.get(pk=pk)
+    except Friend.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    # get details of a single friend
+    if request.method == 'GET':
+        return Response({})
+    # delete a single friend
+    elif request.method == 'DELETE':
+        return Response({})
+    # update details of a single friend
+    elif request.method == 'PUT':
+        return Response({})
