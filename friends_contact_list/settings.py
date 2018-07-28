@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'friends',
     'rest_framework',
-    'phonenumber_field',
 ]
 
 MIDDLEWARE = [

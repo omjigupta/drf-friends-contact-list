@@ -18,7 +18,6 @@ def get_post_friends(request):
             'name': request.data.get('name'),
             'age': int(request.data.get('age')),
             'email': request.data.get('email'),
-            'contact_number': request.data.get('contact_number'),
             'address': request.data.get('address')
         }
         serializer = FriendSerializer(data=data)

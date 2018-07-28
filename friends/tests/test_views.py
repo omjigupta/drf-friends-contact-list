@@ -14,11 +14,11 @@ class CreateNewFriendTest(TestCase):
 
     def setUp(self):
         self.valid_payload = {
-            name='Om Ji', age=24, phone_number='9696404453', email='omjigupta@live.com', address='kanpur'
+            name='Om Ji', age=24, email='omji@live.com', address='kanpur'
         }
 
         self.invalid_payload = {
-            name='Suvesh1', age=27, phone_number='805097750', email='suvesh@live.com', address='up'
+            name='Suvesh1', age=27, email='suvesh@live.com', address='up'
         }
 
     def test_create_valid_friend(self):
@@ -43,11 +43,11 @@ class GetAllFriendsTest(TestCase):
 
     def setUp(self):
         Friend.objects.create(
-            name='Om Ji', age=24, phone_number='9696404453', email='omjigupta@live.com', address='kanpur')
+            name='Om Ji', age=24, email='omji@live.com', address='kanpur')
         Friend.objects.create(
-            name='Om Ji1', age=25, phone_number='9696404454', email='omjigupta1@live.com', address='kanpur2')
+            name='Om Ji1', age=25, email='omjigupta1@live.com', address='kanpur2')
         Friend.objects.create(
-            name='Om Ji1', age=26, phone_number='9696404455', email='omjigupta2@live.com', address='kanpur3')
+            name='Om Ji1', age=26, email='omjigupta2@live.com', address='kanpur3')
 
 
     def test_get_all_friends(self):
@@ -65,11 +65,11 @@ class GetSingleFriendTest(TestCase):
 
     def setUp(self):
         self.omji = Friend.objects.create(
-            name='Om Ji', age=24, phone_number='9696404453', email='omjigupta@live.com', address='kanpur')
+            name='Om Ji', age=24, email='omji@live.com', address='kanpur')
         self.omji1 = Friend.objects.create(
-            name='Om Ji1', age=25, phone_number='9696404454', email='omjigupta1@live.com', address='kanpur2')
+            name='Om Ji1', age=25, email='omjigupta1@live.com', address='kanpur2')
         self.omji2 = Friend.objects.create(
-            name='Om Ji1', age=26, phone_number='9696404455', email='omjigupta2@live.com', address='kanpur3')
+            name='Om Ji1', age=26, email='omjigupta2@live.com', address='kanpur3')
 
 
 
