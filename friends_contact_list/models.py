@@ -15,8 +15,8 @@ class Friend(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def get_breed(self):
-        return self.name + ' belongs to ' + self.breed + ' breed.'
+    def get_phone_number(self):
+        return self.name + ' belongs to ' + self.phone_number + ' phone number.'
 
     def __repr__(self):
         return self.name + ' is added.'
